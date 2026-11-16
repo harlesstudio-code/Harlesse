@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harles Studio — Roblox Audio Speed &amp; Open Cloud Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Urbanist:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Floating Dark Pill Navigation (Figma Header Reference) -->
+  <header class="top-nav-wrap">
+    <nav class="pill-navbar" aria-label="Primary Navigation">
+      <div class="nav-group">
+        <a href="#hero" class="nav-pill active" data-nav="hero">Home</a>
+        <a href="#studio" class="nav-pill" data-nav="studio">Speed Studio</a>
+        <a href="#queue" class="nav-pill" data-nav="queue">Batch Queue</a>
+      </div>
+
+      <a href="#hero" class="brand-center" aria-label="Harles Studio Home">
+        <span class="brand-badge">HS</span>
+        <span class="brand-name">HARLES STUDIO</span>
+      </a>
+
+      <div class="nav-group">
+        <a href="#roblox-target" class="nav-pill" data-nav="roblox-target">Roblox Target</a>
+        <a href="#specs" class="nav-pill" data-nav="specs">Specs &amp; Quota</a>
+        <a href="#setup-guide" class="nav-pill" data-nav="setup-guide">Guide</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section (Figma Light Hero + Warm Peach Backdrop) -->
+    <section id="hero" class="hero-section">
+      <div class="hero-badge-wrap">
+        <span class="hero-pill-badge">Audio Lab!</span>
+        <svg class="hero-spark hero-spark-top" width="28" height="29" viewBox="0 0 28 29" fill="none" aria-hidden="true">
+          <path d="M4 17C7 11 10 6 12 2" stroke="#FD853A" stroke-width="2.6" stroke-linecap="round" />
+          <path d="M12 21C17 16 21 12 25 8" stroke="#FD853A" stroke-width="2.6" stroke-linecap="round" />
+          <path d="M15 26C19 24 23 22 26 21" stroke="#FD853A" stroke-width="2.6" stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <div class="hero-title-wrap">
+        <h1 class="hero-title">
+          <span class="accent-orange">Harles</span> Studio,<br />
+          Roblox Audio Lab
+        </h1>
+        <svg class="hero-spark hero-spark-left" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M14 26C26 23 36 20 48 16" stroke="#FEB273" stroke-width="3.2" stroke-linecap="round" />
+          <path d="M22 44C32 37 40 31 50 24" stroke="#FEB273" stroke-width="3.2" stroke-linecap="round" />
+          <path d="M36 55C42 46 47 39 53 31" stroke="#FEB273" stroke-width="3.2" stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <div class="hero-stage">
+        <aside class="hero-callout hero-callout-left">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p>
+            Olah rekaman vokal atau audio pribadimu secara lokal, atur kecepatan secara langsung, dan unggah massal ke Roblox Open Cloud dengan API Key aman di <code>.env</code>.
+          </p>
+        </aside>
+
+        <div class="hero-centerpiece">
+          <div class="peach-semicircle">
+            <div class="hero-wave-bars" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="hero-status-chip">
+              <span class="dot-live"></span>
+              <span id="heroEngineBadge">100% Localhost Engine</span>
+            </div>
+          </div>
+
+          <div class="hero-glass-cta">
+            <a href="#studio" class="cta-primary-pill">
+              <span>Upload Audio</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#roblox-target" class="cta-secondary-pill">Roblox Target</a>
+          </div>
+        </div>
+
+        <aside class="hero-callout hero-callout-right">
+          <div class="star-row" aria-label="5 stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="hero-stat-big">0.5x – 2.5x</div>
+          <div class="hero-stat-sub">Live Speed Preview &amp; Batch</div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Dark Glassmorphic Audio Speed Studio Band (Figma "My Services" Reference) -->
+    <section id="studio" class="dark-studio-band">
+      <div class="studio-glow studio-glow-left" aria-hidden="true"></div>
+      <div class="studio-glow studio-glow-right" aria-hidden="true"></div>
+
+      <div class="studio-container">
+        <div class="studio-header">
+          <h2 class="section-heading-light">
+            Audio <span class="accent-orange">Speed Studio</span>
+          </h2>
+          <p class="studio-subtext">
+            Tambahkan beberapa file audio pribadi sekaligus, dengarkan preview secara langsung pada kecepatan yang kamu mau, lalu unduh atau upload otomatis ke Roblox.
+          </p>
+        </div>
+
+        <!-- 3-Card Glassmorphic Studio Grid -->
+        <div class="studio-cards-grid">
+          <!-- Card 1: Multi-File Dropzone -->
+          <article class="glass-card dropzone-card">
+            <div class="glass-card-top">
+              <h3>1. Upload File Audio</h3>
+              <span id="queueCountPill" class="mini-pill">0 file</span>
+            </div>
+            <div class="glass-divider"></div>
+
+            <label id="dropZone" class="dropzone-area" for="audioFileInput">
+              <input id="audioFileInput" type="file" multiple accept=".mp3,.wav,.ogg,.flac,.m4a,audio/*" hidden />
+              <div class="dropzone-icon-circle">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 16V4M12 4L7 9M12 4L17 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M4 17V18C4 19.6569 5.34315 21 7 21H17C18.6569 21 20 19.6569 20 18V17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <p class="dropzone-title">Klik atau seret banyak file sekaligus</p>
+              <p class="dropzone-hint">Mendukung .mp3, .wav, .ogg, .flac, .m4a (lokal)</p>
+            </label>
+
+            <div class="dropzone-footer-actions">
+              <button type="button" id="btnPickFiles" class="btn-dark-chip">Pilih Banyak File</button>
+              <button type="button" id="btnClearAll" class="btn-ghost-chip">Bersihkan Queue</button>
+            </div>
+          </article>
+
+          <!-- Card 2: Master Playback Speed & Pitch -->
+          <article class="glass-card controls-card">
+            <div class="glass-card-top">
+              <h3>2. Master Playback Speed</h3>
+              <span id="masterSpeedReadout" class="speed-readout-pill">1.00x</span>
+            </div>
+            <div class="glass-divider"></div>
+
+            <div class="speed-slider-box">
+              <div class="slider-labels">
+                <span>0.50x (Slow)</span>
+                <span>1.00x (Normal)</span>
+                <span>2.50x (Fast)</span>
+              </div>
+              <input id="masterSpeedSlider" type="range" min="0.5" max="2.5" step="0.05" value="1.0" />
+            </div>
+
+            <div class="preset-pills-row" role="group" aria-label="Preset Kecepatan">
+              <button type="button" class="preset-pill" data-speed="0.75">0.75x</button>
+              <button type="button" class="preset-pill active" data-speed="1.0">1.0x</button>
+              <button type="button" class="preset-pill" data-speed="1.25">1.25x</button>
+              <button type="button" class="preset-pill" data-speed="1.5">1.5x</button>
+              <button type="button" class="preset-pill" data-speed="1.75">1.75x</button>
+              <button type="button" class="preset-pill" data-speed="2.0">2.0x</button>
+            </div>
+
+            <div class="toggle-row">
+              <div>
+                <div class="toggle-title">Preserve Pitch (Jaga Nada Vokal)</div>
+                <div class="toggle-desc">Aktif: suara tidak cempreng/berat saat speed diubah.</div>
+              </div>
+              <label class="switch">
+                <input id="masterPreservePitch" type="checkbox" checked />
+                <span class="slider-switch"></span>
+              </label>
+            </div>
+
+            <div class="export-format-row">
+              <label for="exportFormatSelect" class="format-label">Format Ekspor:</label>
+              <select id="exportFormatSelect" class="dark-select">
+                <option value="auto">Smart Auto (WAV / Original saat 1.0x)</option>
+                <option value="wav">Selalu Render WAV</option>
+              </select>
+            </div>
+
+            <button type="button" id="btnApplyMasterAll" class="btn-orange-full">
+              Terapkan Speed ke Semua Track
+            </button>
+          </article>
+
+          <!-- Card 3: Live Audio Preview & Waveform Deck -->
+          <article class="glass-card preview-card">
+            <div class="glass-card-top">
+              <h3>3. Live Audio Preview</h3>
+              <span id="previewSpeedBadge" class="mini-pill accent">1.00x · Pitch Tetap</span>
+            </div>
+            <div class="glass-divider"></div>
+
+            <div class="preview-now-playing">
+              <div class="now-label">Sedang Dipilih:</div>
+              <div id="previewTrackTitle" class="now-title">Belum ada track dipilih</div>
+            </div>
+
+            <div class="waveform-wrap">
+              <canvas id="waveformCanvas" width="420" height="96"></canvas>
+            </div>
+
+            <div class="scrubber-row">
+              <span id="previewCurrentTime">0:00</span>
+              <input id="previewSeekBar" type="range" min="0" max="1000" value="0" disabled />
+              <span id="previewAdjustedDuration">0:00</span>
+            </div>
+
+            <div class="preview-transport">
+              <button type="button" id="btnPreviewPlay" class="btn-play-circle" disabled aria-label="Play or Pause Preview">
+                <svg id="iconPlay" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5.14V19.14L19 12.14L8 5.14Z" />
+                </svg>
+                <svg id="iconPause" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" hidden aria-hidden="true">
+                  <path d="M6 5H10V19H6V5ZM14 5H18V19H14V5Z" />
+                </svg>
+              </button>
+
+              <div class="volume-box">
+                <span class="vol-label">Vol</span>
+                <input id="previewVolume" type="range" min="0" max="1" step="0.05" value="0.9" />
+              </div>
+
+              <button type="button" id="btnPreviewStop" class="btn-dark-chip" disabled>Stop</button>
+            </div>
+
+            <p class="preview-tip">
+              Tips: Geser speed atau klik tombol <strong>Preserve Pitch</strong> selagi audio diputar untuk langsung mendengar perbedaannya!
+            </p>
+          </article>
+        </div>
+
+        <!-- Batch Queue List -->
+        <div id="queue" class="queue-section">
+          <div class="queue-header">
+            <div>
+              <h3 class="queue-title">Batch Audio Queue</h3>
+              <p class="queue-subtitle">Setiap file punya preview, kecepatan, nama aset Roblox (<code>displayName</code>), tombol download, dan status upload masing-masing.</p>
+            </div>
+            <div class="queue-bulk-buttons">
+              <button type="button" id="btnDownloadAll" class="btn-dark-chip" disabled>Download Semua</button>
+              <button type="button" id="btnUploadAll" class="btn-orange-pill" disabled>
+                <span>Upload Semua ke Roblox</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div id="batchProgressBarWrap" class="batch-progress-wrap" hidden>
+            <div class="batch-progress-info">
+              <span id="batchProgressLabel">Memproses...</span>
+              <span id="batchProgressCount">0/0</span>
+            </div>
+            <div class="batch-progress-track">
+              <div id="batchProgressFill" class="batch-progress-fill" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div id="queueEmptyState" class="queue-empty">
+            <div class="empty-icon">♪</div>
+            <p>Belum ada file audio di antrean. Seret beberapa file ke kotak <strong>Upload File Audio</strong> di atas untuk memulai.</p>
+          </div>
+
+          <div id="queueList" class="queue-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Light Section: Roblox Target Creator & .env Security -->
+    <section id="roblox-target" class="target-section">
+      <div class="section-center-head">
+        <h2>Target Upload <span class="accent-orange">Roblox Open Cloud</span></h2>
+        <p>Pilih apakah audio masuk ke <strong>Akun Pribadi (User ID)</strong> atau <strong>Group (Group ID)</strong>. API Key disimpan aman di file <code>.env</code> lokal komputermu.</p>
+      </div>
+
+      <div class="target-card-shell">
+        <div id="shareModeBanner" class="share-mode-banner" hidden>
+          <strong>Mode Berbagi (BYOK) Aktif:</strong> API Key &amp; Target ID yang kamu masukkan hanya tersimpan sementara di browser kamu sendiri (<code>sessionStorage</code>) dan tidak menyentuh <code>.env</code> pemilik server.
+        </div>
+
+        <div class="target-mode-switcher" role="tablist" aria-label="Pilih Target Roblox">
+          <button type="button" id="tabTargetUser" class="target-tab active" data-target="user">
+            Akun Pribadi (User ID)
+          </button>
+          <button type="button" id="tabTargetGroup" class="target-tab" data-target="group">
+            Group (Group ID)
+          </button>
+        </div>
+
+        <form id="robloxConfigForm" class="target-form-grid">
+          <div class="field-group">
+            <label for="inputUserId">Roblox User ID (Akun Pribadi)</label>
+            <input id="inputUserId" type="text" inputmode="numeric" placeholder="Contoh: 123456789" />
+            <small>Diambil dari URL profil Roblox-mu: <code>roblox.com/users/&lt;USER_ID&gt;/profile</code></small>
+          </div>
+
+          <div class="field-group">
+            <label for="inputGroupId">Roblox Group ID</label>
+            <input id="inputGroupId" type="text" inputmode="numeric" placeholder="Contoh: 98765432" />
+            <small>Diambil dari URL group: <code>roblox.com/communities/&lt;GROUP_ID&gt;</code></small>
+          </div>
+
+          <div class="field-group field-full">
+            <div class="apikey-label-row">
+              <label for="inputApiKey">Roblox Open Cloud API Key</label>
+              <span id="apiKeyStatusBadge" class="status-badge pending">Belum tersimpan di .env</span>
+            </div>
+            <div class="pill-input-bar">
+              <span class="pill-icon-circle" aria-hidden="true">🔑</span>
+              <input id="inputApiKey" type="password" autocomplete="off" placeholder="Tempel API Key Roblox milikmu di sini" />
+              <button type="submit" id="btnSaveRobloxConfig" class="btn-orange-pill">Simpan ke .env</button>
+            </div>
+            <small id="apiKeyHelpNote">API Key tidak pernah dikirim balik ke UI. Pada mode lokal disimpan di <code>.env</code>; pada mode berbagi/HP hanya dipakai di sesi browser masing-masing.</small>
+          </div>
+        </form>
+      </div>
+
+      <!-- Specs & Monthly Quota Cards -->
+      <div id="specs" class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-tag">Spesifikasi File</div>
+          <h4>Batas Teknis Audio Roblox</h4>
+          <ul>
+            <li>Format: <code>.mp3</code>, <code>.ogg</code>, <code>.wav</code>, <code>.flac</code></li>
+            <li>Ukuran maksimal: <strong>20 MB</strong> per upload</li>
+            <li>Durasi maksimal: <strong>7 menit</strong> (setelah speed diubah)</li>
+            <li>Sample rate: <strong>&le; 48 kHz</strong></li>
+          </ul>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-tag">Biaya &amp; Kuota</div>
+          <h4>Kuota Bulanan Gratis</h4>
+          <ul>
+            <li>Biaya upload: <strong>Gratis (0 Robux)</strong></li>
+            <li>Akun belum ID-Verified: <strong>10 audio / bulan</strong></li>
+            <li>Akun sudah ID-Verified: <strong>100 audio / bulan</strong></li>
+            <li>Status default audio: <strong>Private</strong> ke User/Group target</li>
+          </ul>
+        </div>
+
+        <div id="setup-guide" class="spec-card">
+          <div class="spec-tag">Cara Setup API Key</div>
+          <h4>Langkah Cepat Open Cloud</h4>
+          <ol>
+            <li>Buka <strong>Creator Dashboard → Open Cloud → API Keys</strong>.</li>
+            <li>Klik <strong>Create API Key</strong>, tambahkan sistem <strong>Assets</strong> dengan izin <code>Read</code> &amp; <code>Write</code>.</li>
+            <li>Masukkan IP kamu jika perlu, simpan key lalu tempel di form di atas.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Orange Marquee Strip -->
+    <div class="orange-marquee-wrap" aria-hidden="true">
+      <div class="orange-marquee-track">
+        <span>Harles Studio</span><span class="star">✦</span>
+        <span>Multi-File Batch</span><span class="star">✦</span>
+        <span>Live Speed Preview</span><span class="star">✦</span>
+        <span>Preserve Pitch</span><span class="star">✦</span>
+        <span>User &amp; Group Target</span><span class="star">✦</span>
+        <span>100% Localhost .env</span><span class="star">✦</span>
+        <span>Harles Studio</span><span class="star">✦</span>
+        <span>Multi-File Batch</span><span class="star">✦</span>
+        <span>Live Speed Preview</span><span class="star">✦</span>
+        <span>Preserve Pitch</span><span class="star">✦</span>
+        <span>User &amp; Group Target</span><span class="star">✦</span>
+        <span>100% Localhost .env</span><span class="star">✦</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Dark Rounded Footer (Figma Footer Reference) -->
+  <footer class="dark-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <h2 class="footer-headline">Siap Upload Audio ke Roblox Studio?</h2>
+          <p class="footer-sub">Jalankan lokal di PC kamu kapan saja dengan double-click <code>start-harles-studio.bat</code>.</p>
+        </div>
+        <a href="#studio" class="btn-orange-pill">
+          <span>Kembali ke Studio</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div class="footer-brand">
+          <span class="brand-badge">HS</span>
+          <span class="brand-name">HARLES STUDIO</span>
+        </div>
+        <div class="footer-meta">
+          <span>Personal Roblox Audio Speed &amp; Open Cloud Uploader</span>
+          <span>·</span>
+          <span id="footerFfmpegStatus">Checking engine...</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="/audio-engine.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
