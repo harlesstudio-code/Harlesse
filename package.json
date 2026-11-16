@@ -1,0 +1,13 @@
+{
+  "name": "harles-studio",
+  "version": "1.0.0",
+  "description": "Harles Studio - Roblox Audio Speed & Open Cloud Uploader",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:share": "node server.js --share"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

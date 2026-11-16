@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: harles-studio
+    runtime: node
+    plan: free
+    buildCommand: ""
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_MODE
+        value: shared
